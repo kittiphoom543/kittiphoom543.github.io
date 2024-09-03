@@ -1,0 +1,285 @@
+body {
+    font-family: "Chakra Petch", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    position: relative;
+    z-index: 1;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img2/secondbg.jpg'); /* รูปพื้นหลัง */
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5; /* ปรับความโปร่งใส */
+    z-index: -1; /* ทำให้รูปพื้นหลังอยู่ด้านหลัง */
+}
+.header {
+    background-size: cover;
+    text-align: center;
+    margin: 0px 0px -4px 0px;
+}
+.imgheader img {
+    max-width: 100%;
+    height: auto;
+}
+.logo{
+    position: absolute;
+}
+#logo:hover{
+    cursor: pointer;
+}
+
+.about {
+    padding: 20px;
+    text-align: center;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+    background-size: cover; 
+    flex-direction: column;
+}
+.card2 {
+    /* background-color: rgba(224, 224, 224, 0.8); */
+    border-radius: 10px 10px 2px 2px;
+    padding: 5px;
+    margin: 0.5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 6px 2px 4px black;
+    /* font-weight: bold;
+    -webkit-text-stroke: 0.5px ; */
+}
+.footer {
+    background-image: linear-gradient(to bottom, rgb(211,211,211,0.9), rgb(119,119,119,0.9));
+    color: black;
+    text-align: center;
+    position: relative;
+    padding: 10px 0px;
+    bottom: 0;
+    width: 100%;
+}
+.footer p {
+    margin: 5px 0;
+}
+.menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menulist {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7); /* พื้นหลังโปร่งใส */
+    border-radius: 25px; /* ขอบมน */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.menuhome {
+    background-color: rgba(255, 255, 255, 0.7); /* พื้นหลังโปร่งใส */
+    border-radius: 25px; /* ขอบมน */
+    padding: 5px 15px;
+    margin: 0px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.menuhome:hover {
+    cursor: pointer;
+    background-color: rgba(200, 200, 200, 0.829);
+}
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 15px;
+}
+.menu a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.menu a.home-icon {
+    background: url('home-icon.png') no-repeat center; /* ใส่รูปไอคอน home */
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 columns ที่มีขนาดเท่ากัน */
+    grid-gap: 20px; /* ระยะห่างระหว่าง grid items */
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(143,143,143,0.9), rgb(0, 0, 0,0.9));
+    padding: 30px 10px;
+}
+
+.button_more{
+   background-color: rgb(143,143,143,0.9);
+   padding: 10px;
+   border-radius: 5px;
+   text-align: center;
+   color: white;
+}
+.button_more:hover{
+    background-color: rgb(202, 203, 204,0.9);
+    cursor: pointer;
+ }
+ .headerPadding{
+    padding: 120px 0px;
+ }
+ .grid-Type{
+    display: grid;
+    width: 85%;
+    grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 columns ที่มีขนาดเท่ากัน */
+    grid-gap: 20px; /* ระยะห่างระหว่าง grid items */
+    padding: 30px 10px;
+    grid-template-areas:
+    "col1 col2"
+    "row2 row2"
+    "row3 row3"
+    "row4 row4"
+    "row5 row5"
+    "row6 row6"
+    "row7 row7";
+ }
+.item1 { grid-area: col1;}
+.item2 { grid-area: col2;}
+.item3 { grid-area: row2;}
+.item4 { grid-area: row3;}
+.item5 { grid-area: row4;}
+.item6 { grid-area: row5;}
+.item7 { grid-area: row6;}
+.item8 { grid-area: row7;}
+ .type-text{
+    text-align: left;
+    border-radius: 10px;
+    padding: 15px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ .type-photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ .grid-Type-photo{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 columns ที่มีขนาดเท่ากัน */
+    grid-gap: 20px; /* ระยะห่างระหว่าง grid items */
+    padding: 5px 5px;
+    align-items: center;
+ }
+ .flex-Training{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+ }
+ .Training-card{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    flex-direction: column;
+    margin: 10px;
+ }
+ .flex-Rank{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+ }
+ .flex-Rank2{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+ }
+ .socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  5px;
+    /*background-color: rgb(143,143,143,0.9);*/
+    margin: 5px;
+    border-radius: 50%;
+}
+ .socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.table_component {
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    border: 1px none #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: center;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px none #dededf;
+    background-color: #eceff1;
+    color: #000000;
+    padding: 5px;
+}
+
+.table_component td {
+    border: 1px none #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px;
+}
